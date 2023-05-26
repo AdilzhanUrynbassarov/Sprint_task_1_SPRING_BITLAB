@@ -25,13 +25,19 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr th:each="stu : ${studenty}">
-                            <td th:text="${stu.id}"></td>
-                            <td th:text="${stu.name}"></td>
-                            <td th:text="${stu.surname}"></td>
-                            <td th:text="${stu.exam}"></td>
-                            <td th:text="${stu.mark}"></td>
+                        <tr th:each="stu : ${studenty}" >
+                            <td th:text="${stu.id}" th:if="${stu.exam >= 50}"></td>
+                            <td th:text="${stu.id}" th:if="${stu.exam < 50}" style="color: red"></td>
+                            <td th:text="${stu.name}" th:if="${stu.exam >= 50}" ></td>
+                            <td th:text="${stu.name}" th:if="${stu.exam < 50}" style="color: red"></td>
+                            <td th:text="${stu.surname}" th:if="${stu.exam >= 50}"></td>
+                            <td th:text="${stu.surname}" th:if="${stu.exam < 50}" style="color: red"></td>
+                            <td th:text="${stu.exam}" th:if="${stu.exam >=50}"></td>
+                            <td th:text="${stu.exam}" th:if="${stu.exam <50}" style="color: red"></td>
+                            <td th:text="${stu.mark}" th:if="${stu.exam >= 50}"></td>
+                            <td th:text="${stu.mark}" th:if="${stu.exam < 50}" style="color: red"></td>
                         </tr>
+
                         </tbody>
                     </table>
 
