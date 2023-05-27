@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import spring.bitlab.sprint_task_1.db.Student;
 
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
 
 @Controller
@@ -27,7 +27,7 @@ public class HomeController {
     }
     @GetMapping(value = "/add-student") // Одинаковые ссылки можно использовать для Get и Post mapping
     public String addMusicPage(Model model) {
-        return "addStudent";// request.getDispatcher("/addmusic.html");
+        return "addstudent";// request.getDispatcher("/addmusic.html");
     }
 
 }
